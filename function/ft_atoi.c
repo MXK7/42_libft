@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpoussie <mpoussie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/11 22:05:48 by mpoussie          #+#    #+#             */
-/*   Updated: 2023/04/12 00:33:56 by mpoussie         ###   ########.fr       */
+/*   Created: 2023/04/12 03:25:50 by mpoussie          #+#    #+#             */
+/*   Updated: 2023/04/12 03:44:50 by mpoussie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+#include <string.h>
+#include <stdio.h>
+
+int	ft_atoi(const char *str)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	while (src[i] && i < n)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
+}
+
+int	main(void)
+{
+	char a[] = "125";
+
+	printf("%d", atoi(a));
+	printf("\n---------------------\n");
+	// printf("%s", ft_atoi(a));
 }

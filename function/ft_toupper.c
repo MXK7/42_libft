@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpoussie <mpoussie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/11 22:05:48 by mpoussie          #+#    #+#             */
-/*   Updated: 2023/04/12 00:33:56 by mpoussie         ###   ########.fr       */
+/*   Created: 2023/04/11 22:36:50 by mpoussie          #+#    #+#             */
+/*   Updated: 2023/04/12 02:13:35 by mpoussie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+int	ft_toupper(char *str)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	while (src[i] && i < n)
+	if (str[0] == 0)
+		return (1);
+	while (str[i])
 	{
-		dest[i] = src[i];
+		if (str[i] < 'A' || str[i] > 'Z')
+			return (0);
 		i++;
 	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
+	return (1);
 }

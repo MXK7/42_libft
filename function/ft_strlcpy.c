@@ -1,29 +1,32 @@
-/* ************************************************************************** */
+/* **************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpoussie <mpoussie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/11 22:05:48 by mpoussie          #+#    #+#             */
-/*   Updated: 2023/04/12 00:33:56 by mpoussie         ###   ########.fr       */
+/*   Created: 2023/04/11 22:46:01 by mpoussie          #+#    #+#             */
+/*   Updated: 2023/04/12 00:41:14 by mpoussie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+#include <bsd/string.h>
+#include <stdio.h>
+
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
-	while (src[i] && i < n)
+	if (size == 0 || src == NULL)
+		return (0);
+	while (src[i] && i < (size--))
 	{
 		dest[i] = src[i];
 		i++;
 	}
-	while (i < n)
-	{
-		dest[i] = '\0';
+	dest[i] = '\0';
+	while (src[i])
 		i++;
-	}
-	return (dest);
+	return (i);
 }
