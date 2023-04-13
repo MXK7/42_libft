@@ -12,5 +12,5 @@
 
 int	ft_isalpha(int c) 
 {
-	// TODO	
+	return ((97 <= c && c <= 122) || (65 <= c && c <= 90));
 }
