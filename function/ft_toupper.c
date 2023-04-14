@@ -10,18 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(char *str)
+int 	ft_toupper(int c)
 {
-	int	i;
-
-	i = 0;
-	if (str[0] == 0)
-		return (1);
-	while (str[i])
-	{
-		if (str[i] < 'A' || str[i] > 'Z')
-			return (0);
-		i++;
-	}
-	return (1);
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	return (0);
 }
