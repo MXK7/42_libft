@@ -6,12 +6,11 @@
 /*   By: mpoussie <mpoussie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 22:05:19 by mpoussie          #+#    #+#             */
-/*   Updated: 2023/04/12 02:11:45 by mpoussie         ###   ########.fr       */
+/*   Updated: 2023/04/15 17:36:40 by mpoussie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include <libft.h>
 
 char	*ft_strchr(const char *str, int c)
 {

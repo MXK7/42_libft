@@ -6,23 +6,23 @@
 /*   By: mpoussie <mpoussie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 18:35:22 by mpoussie          #+#    #+#             */
-/*   Updated: 2023/04/12 22:38:53 by mpoussie         ###   ########.fr       */
+/*   Updated: 2023/04/15 20:57:03 by mpoussie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <libft.h>
+
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int i;
-	if (n == 0 || dest == src)
-		return (dest);
-	if (dest > src)
+	size_t	i;
+
+	if (!n)
+		return (NULL);
+	i = 0;
+	while (i < n)
 	{
-		i = 0;
-		while (i < n)
-		{
-			((char *)dest)[i] = ((char *)src)[i]; 
-			i++;
-		}
+		i++;
+		((char *)dest)[i] = ((char *)src)[i];
 	}
 	return (dest);
 }

@@ -6,19 +6,11 @@
 /*   By: mpoussie <mpoussie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 22:04:52 by mpoussie          #+#    #+#             */
-/*   Updated: 2023/04/12 00:42:09 by mpoussie         ###   ########.fr       */
+/*   Updated: 2023/04/15 17:37:42 by mpoussie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
+#include <libft.h>
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {

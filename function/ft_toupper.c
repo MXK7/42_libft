@@ -6,11 +6,11 @@
 /*   By: mpoussie <mpoussie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 22:36:50 by mpoussie          #+#    #+#             */
-/*   Updated: 2023/04/12 02:13:35 by mpoussie         ###   ########.fr       */
+/*   Updated: 2023/04/15 20:57:34 by mpoussie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int 	ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
 		return (c - 32);
