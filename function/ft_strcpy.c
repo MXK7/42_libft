@@ -6,11 +6,9 @@
 /*   By: mpoussie <mpoussie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 22:04:29 by mpoussie          #+#    #+#             */
-/*   Updated: 2023/04/16 05:38:50 by mpoussie         ###   ########.fr       */
+/*   Updated: 2023/04/16 20:22:20 by mpoussie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 char	*ft_strcpy(char *dest, char *src)
 {
