@@ -6,13 +6,15 @@
 /*   By: mpoussie <mpoussie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 22:36:04 by mpoussie          #+#    #+#             */
-/*   Updated: 2023/04/15 20:57:32 by mpoussie         ###   ########.fr       */
+/*   Updated: 2023/04/16 05:38:05 by mpoussie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
 		return (c + 32);
-	return (0);
+	return (c);
 }

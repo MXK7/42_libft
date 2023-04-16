@@ -6,13 +6,15 @@
 /*   By: mpoussie <mpoussie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 22:05:39 by mpoussie          #+#    #+#             */
-/*   Updated: 2023/04/12 02:12:06 by mpoussie         ###   ########.fr       */
+/*   Updated: 2023/04/16 06:40:39 by mpoussie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i])

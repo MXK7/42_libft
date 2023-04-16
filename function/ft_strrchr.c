@@ -6,21 +6,25 @@
 /*   By: mpoussie <mpoussie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 22:05:04 by mpoussie          #+#    #+#             */
-/*   Updated: 2023/04/15 18:43:16 by mpoussie         ###   ########.fr       */
+/*   Updated: 2023/04/16 06:49:54 by mpoussie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *str, int c)
 {
-	const char	*i;
+	int	i;
+	int	i2;
 
-	i = str + ft_strlen(str);
-	while (str <= i)
+	i2 = 0;
+	while (str[i2])
+		i2++;
+	i = i2;
+	while (i >= 0)
 	{
-		if (*i == (char)c)
-			return ((char *)i);
+		if (str[i] == (char)c)
+			return ((char *)str + i);
 		i--;
 	}
 	return (NULL);

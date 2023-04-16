@@ -6,31 +6,36 @@
 /*   By: mpoussie <mpoussie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 03:25:50 by mpoussie          #+#    #+#             */
-/*   Updated: 2023/04/15 17:36:01 by mpoussie         ###   ########.fr       */
+/*   Updated: 2023/04/16 06:25:36 by mpoussie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
-	unsigned int	strlen;
-	unsigned int	c;
-	unsigned int	nb;
+	int	i;
+	int	j;
+	int	result;
 
-	nb = 0;
-	c = 1;
-	strlen = ft_strlen(str);
-	if (!strlen)
-		return (0);
-	while (strlen--)
+	i = 0;
+	j = 1;
+	result = 0;
+	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t' || str[i] == '\v'
+		|| str[i] == '\f' || str[i] == '\r')
+		i++;
+	if (str[i] == '+' || str[i] == '-')
 	{
-		if (!(str[strlen] >= 48 && str[strlen] <= 57))
-			return (0);
-		if ((nb + ((str[strlen] - 48) * c)) > 2147483647)
-			return (0);
-		nb += (str[strlen] - 48) * c;
-		c *= 10;
+		if (str[i] == '-')
+		{
+			j = j * -1;
+		}
+		i++;
 	}
-	return (nb);
+	while (str[i] >= 48 && str[i] <= 57)
+	{
+		result = result * 10 + (str[i] - 48);
+		i++;
+	}
+	return (result * j);
 }

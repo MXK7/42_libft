@@ -6,7 +6,7 @@
 #    By: mpoussie <mpoussie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/12 16:02:49 by mpoussie          #+#    #+#              #
-#    Updated: 2023/04/15 20:51:44 by mpoussie         ###   ########.fr        #
+#    Updated: 2023/04/16 11:04:44 by mpoussie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,17 +34,17 @@ SRCS    		=	ft_isalnum.c \
 					ft_isdigit.c \
 					ft_atoi.c \
 					ft_memcmp.c \
-					ft_bzero.c \
 					ft_strnstr.c \
+					ft_bzero.c \
+					ft_calloc.c \
+					ft_memset.c  \
+					ft_memchr.c \
 					# ft_putnbr_fd.c \
-					# ft_calloc.c \
 					# ft_split.c \
 					# ft_strlcat.c \
 					# ft_itoa.c \
 					# ft_substr.c \
-					# ft_memchr.c \
 					# ft_putchar_fd.c \
-					# ft_memset.c  \
 					# ft_putendl_fd.c \
 					# ft_putstr_fd.c \
 					# ft_strjoin.c \
