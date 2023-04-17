@@ -6,11 +6,11 @@
 #    By: mpoussie <mpoussie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/12 16:02:49 by mpoussie          #+#    #+#              #
-#    Updated: 2023/04/17 00:26:23 by mpoussie         ###   ########.fr        #
+#    Updated: 2023/04/17 19:24:18 by mpoussie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= libft.a
+NAME	=	libft.a
 
 CC				= gcc
 RM				= rm -rf
@@ -68,11 +68,11 @@ OBJS			=	$(SRCS:.c=.o)
 all: ${NAME}
 
 ${NAME}:		${OBJS} 
-				ar rcs $(NAME)
+				ar rcs $(NAME) ${OBJS}
 clean:
 				$(RM) $(OBJS) $(BONUS_OBJS)
-fclean:
-				$(RM) $(OBJS)
+fclean:			clean
+				$(RM) $(NAME)
 re: fclean ${NAME}
 
 .PHONY: all, clean, fclean, re
