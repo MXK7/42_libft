@@ -1,34 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpoussie <mpoussie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/15 21:00:31 by mpoussie          #+#    #+#             */
-/*   Updated: 2023/04/18 03:27:20 by mpoussie         ###   ########.fr       */
+/*   Created: 2023/01/31 17:43:16 by mpoussie          #+#    #+#             */
+/*   Updated: 2023/04/18 03:53:54 by mpoussie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
+	char	*str;
 	size_t	i;
+	size_t	j;
 
+	str = (char *)malloc(sizeof(*s1) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!str)
+		return (NULL);
 	i = 0;
-	if (!dest || !src)
-		return (0);
-	if (size > 0)
+	j = 0;
+	while (s1[i])
 	{
-		while (--size && src[i])
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		dest[i] = '\0';
-	}
-	while (src[i])
+		str[j++] = s1[i];
 		i++;
-	return (i);
+	}
+	i = 0;
+	while (s2[i])
+	{
+		str[j++] = s2[i];
+		i++;
+	}
+	str[j] = 0;
+	return (str);
 }
