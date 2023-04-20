@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpoussie <mpoussie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/16 10:18:40 by mpoussie          #+#    #+#             */
-/*   Updated: 2023/04/17 19:50:20 by mpoussie         ###   ########.fr       */
+/*   Created: 2023/04/16 23:55:46 by mpoussie          #+#    #+#             */
+/*   Updated: 2023/04/20 06:53:13 by mpoussie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	result;
-	char	*ret;
-	size_t	i;
+	char	*sub_str;
+	size_t	s_len;
 
-	result = count * size;
-	ret = malloc(result);
-	i = 0;
-	while (i < result)
-		((char *)ret)[i++] = '\0';
-	return (ret);
+	if (!s)
+		return (NULL);
+	s_len = ft_strlen(s);
+	if (start >= s_len)
+		return (ft_strdup(""));
+	if (ft_strlen(s + start) < len)
+		len = ft_strlen(s + start);
+	sub_str = (char *)malloc((len + 1) * sizeof(char));
+	if (!sub_str)
+		return (NULL);
+	ft_strlcpy(sub_str, s + start, len + 1);
+	return (sub_str);
 }

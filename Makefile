@@ -6,7 +6,7 @@
 #    By: mpoussie <mpoussie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/12 16:02:49 by mpoussie          #+#    #+#              #
-#    Updated: 2023/04/19 10:21:42 by mpoussie         ###   ########.fr        #
+#    Updated: 2023/04/20 06:55:46 by mpoussie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,11 +69,13 @@ BONUS_OBJS		= 	$(BONUS:.c=.o)
 all: ${NAME}
 
 ${NAME}:		${OBJS} $(BONUS_OBJS)
-				ar rcs $(NAME) ${OBJS} $(BONUS_OBJS)
+				ar rcs $(NAME) ${OBJS}
 clean:
 				$(RM) $(OBJS) $(BONUS_OBJS)
 fclean:			clean
-				$(RM) $(NAME)
+				$(RM) $(NAME)	
+bonus:			$(OBJS) $(BONUS_OBJS)
+				ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 re: fclean ${NAME}
 
 .PHONY: all, clean, fclean, re
