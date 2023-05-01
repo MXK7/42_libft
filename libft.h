@@ -6,7 +6,7 @@
 /*   By: mpoussie <mpoussie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 05:49:13 by mpoussie          #+#    #+#             */
-/*   Updated: 2023/05/01 04:10:02 by mpoussie         ###   ########.fr       */
+/*   Updated: 2023/05/01 19:25:35 by mpoussie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,5 +118,18 @@ void				ft_put_ptr(uintptr_t nbr);
 void				ft_put_hex(unsigned int nbr, const char format);
 
 char				*ft_unsigned_itoa(unsigned int nbr);
+
+//////////////////////////////////////////////////////////////////////////////
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
+
+# ifndef OPEN_MAX
+#  define OPEN_MAX 2048
+# endif
+
+char	*get_next_line(int fd);
+char	*ft_gnl_strjoin(char *s1, char *s2);
 
 #endif

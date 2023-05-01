@@ -6,7 +6,7 @@
 #    By: mpoussie <mpoussie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/12 16:02:49 by mpoussie          #+#    #+#              #
-#    Updated: 2023/05/01 04:07:13 by mpoussie         ###   ########.fr        #
+#    Updated: 2023/05/01 19:20:05 by mpoussie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,9 @@ CC				= gcc
 RM				= rm -rf
 CFLAGS			= -Wall -Wextra -Werror -I.
 
-SRCS    		=	ft_printf/ft_printf.c \
+SRCS    		=	ft_gnl/get_next_line.c \
+					ft_gnl/get_next_line_utils.c \
+					ft_printf/ft_printf.c \
 					ft_printf/src/ft_printf_function.c \
 					ft_printf/src/ft_printf_function2.c \
 					ft_printf/src/ft_printf_utils.c \
